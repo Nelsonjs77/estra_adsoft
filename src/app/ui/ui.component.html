@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="ui.component.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Ecuaciones del bienestar</h1>
+    </header>
+    <section id="intro">
+        <h2 id="resuelve">Ecuación: y = aX + b</h2>
+    </section>
+    <section id="datos">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        <h2>Introduce los datos:</h2>
+        <h3>Valor de X:</h3>
+        <input id="numero" placeholder="Introduce los valores de X" [(ngModel)]="numero" type="string" class="form-control numero" name="numero" evalue="0.0">
+        <h3>Valor de a:</h3>
+        <input id="valorA" placeholder="Introduce el valor A" [(ngModel)]="valorA" type="number" class="form-control valorA" name="valorA" evalue="0.0">
+        <h3>Valor de b:</h3>
+        <input id="valorB" placeholder="Introduce el valor B" [(ngModel)]="valorB" type="number" class="form-control valorB" name="valorB" evalue="0.0"> 
+        <br>
+        <button (click)="calcular()">Calcular</button>
+    </section>
+    <section id="resultado">
+        <h3>Resultado:</h3>
+        <span class="resultado">{{ resultado }}</span>
+    </section>
+    <footer>© Aldo Torres Ramirez | Ingeniería de Software</footer>
+</body>
+</html>
